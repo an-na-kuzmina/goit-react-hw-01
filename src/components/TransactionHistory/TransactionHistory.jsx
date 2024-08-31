@@ -1,25 +1,24 @@
-import './components/TransactionHistory/TransactionHistory.module.css';
-import TransactionHistoryItem from './components/TransactionsHistoryItem.jsx';
+import s from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
-  const arrayTransaction = items.map(transaction => (
-    <TransactionHistoryItem
-      key={transaction.id}
-      type={transaction.type}
-      amount={transaction.amount}
-      currency={transaction.currency}
-    />
-  ));
   return (
-    <table>
-      <thead>
+    <table className={s.transactionsTable}>
+      <thead className={s.tableTitle}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
       </thead>
-      <tbody>{arrayTransaction}</tbody>
+      <tbody>
+        {items.map(({ id, type, amount, currency }) => (
+          <tr className={s.tableRow} key={id}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 };

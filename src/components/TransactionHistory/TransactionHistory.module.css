@@ -1,0 +1,30 @@
+.transactionsTable {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.transactionsTable,
+th,
+td {
+  border: 2px solid #333;
+}
+
+.tableTitle {
+  background-color: black;
+  color: white;
+}
+
+.tableRow:nth-child(even) {
+  background-color: lightgray;
+  color: black;
+}
+.tableRow:nth-child(odd) {
+  background-color: white;
+  color: black;
+}
+
+table tbody td:first-child {
+  text-transform: capitalize;
+}

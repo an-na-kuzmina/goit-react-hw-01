@@ -1,22 +1,21 @@
-import './components/FriendList/FriendList.module.css';
-import FriendListItem from './components/FriendListItem/FriendListItem.jsx';
+import css from './FriendList.module.css';
+import FriendListItem from '../FriendListItem/FriendListItem.jsx';
 
-const FriendList = ({ list }) => {
-  const arrayFriends = list.map(friend => (
-    <FriendListItem
-      key={friend.id}
-      avatar={friend.avatar}
-      name={friend.name}
-      isOnline={friend.isOnline}
-    />
-  ));
-
+const FriendList = ({ friends }) => {
   return (
     <ul>
-      {arrayFriends}
-      <li>
-        <FriendListItem />
-      </li>
+      {friends.map(friend => {
+        return (
+          <li key={friend.id}>
+            <FriendListItem
+              avatar={friend.avatar}
+              name={friend.name}
+              isOnline={friend.isOnline}
+            />
+          </li>
+        );
+      })}
+      ;
     </ul>
   );
 };
