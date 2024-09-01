@@ -1,7 +1,7 @@
 .transactionsTable {
-  width: 100%;
+  width: 670px;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px auto;
   border-collapse: collapse;
 }
 

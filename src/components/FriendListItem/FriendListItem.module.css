@@ -1,0 +1,17 @@
+.userName {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 6px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
